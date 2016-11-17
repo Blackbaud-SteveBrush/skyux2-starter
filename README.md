@@ -1,2 +1,6 @@
 # skyux2-starter
-Quick-start for a SKY UX 2 application
+
+```
+npm install
+npm start
+```
