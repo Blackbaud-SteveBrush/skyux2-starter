@@ -6,13 +6,14 @@ import { Title } from '@angular/platform-browser';
   template: require('./app.component.html')
 })
 export class AppComponent implements OnInit {
+
   constructor(private titleService: Title) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.setTitle('My App');
   }
 
-  setTitle(title: string): void {
+  public setTitle(title: string): void {
     this.titleService.setTitle(title);
   }
 }

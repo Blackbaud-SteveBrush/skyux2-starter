@@ -6,3 +6,8 @@ npm start
 ```
 
 Open http://localhost:8080/.
+
+### Testing
+```
+npm test
+```

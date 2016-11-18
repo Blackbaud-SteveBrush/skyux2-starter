@@ -19,14 +19,7 @@ module.exports = {
       rules: [
         {
           test: /\.ts$/,
-          loaders: [
-            'awesome-typescript-loader',
-            'angular2-template-loader',
-
-            // Allows us to lazy load modules with webpack:
-            // https://github.com/angular/angular/issues/11625
-            'angular2-router-loader'
-          ],
+          loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
           exclude: [/\.(spec|e2e)\.ts$/]
         },
         {
@@ -49,10 +42,11 @@ module.exports = {
             loader: 'css-loader'
           })
         },
-        // {
-        //   test: /\.css$/,
-        //   loaders: ['style-loader', 'css-loader']
-        // },
+        {
+          test: /\.css$/,
+          exclude: /node_modules/,
+          loaders: ['style-loader', 'css-loader']
+        },
         {
           test: /\.scss$/,
           loaders: ['raw-loader', 'sass-loader']
